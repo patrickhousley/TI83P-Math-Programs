@@ -1,0 +1,21 @@
+ClrHome
+ClrDraw
+CoordOff
+AxesOff
+Input "X1=",A
+Input "Y1=",B
+Input "X2=",C
+Input "Y2=",D
+A+C->E
+B+D->F
+E/2->G
+F/2->H
+Text(2,1,"((",A,"+",C,")/2),((",B,"+",D,")/2)"
+Text(8,2,"(",E,"/2),(",F,"/2)"
+Text(14,2,"MIDPOINT=",G,",",H
+Pause 
+ClrDraw
+CoordOn
+AxesOn
+ClrHome
+Stop

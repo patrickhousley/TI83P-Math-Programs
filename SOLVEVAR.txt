@@ -1,0 +1,125 @@
+ClrHome
+ClrDraw
+CoordOff
+AxesOff
+Goto 9
+Lbl Y
+AxesOff
+ClrDraw
+Horizontal ~10
+Horizontal 10
+Vertical ~10
+Vertical 10
+Text(5,15,"SOLVING  SYSTEM  OF")
+Text(15,30,"EQUTIONS")
+Text(25,25,"WITH  ORDERED")
+Text(35,35,"DOUBLE")
+Text(45,43,"OR")
+Text(55,35,"TRIPLE")
+Pause 
+ClrDraw
+Horizontal 10
+Horizontal ~10
+Vertical 10
+Vertical ~10
+Text(5,20,"BROUGHT  TO  YOU"
+Text(15,40,"BY"
+Text(25,30,"PATRICK"
+Text(35,10,"PHOUSLEY14*MSN.COM"
+Pause 
+ClrDraw
+Horizontal 10
+Horizontal ~10
+Vertical 10
+Vertical ~10
+Text(5,10,"FOR  MORE  INFORMATION"
+Text(15,10,"VIEW  THE  READ  ME  FILE"
+Text(25,10,"INCLUDED  IN  THE  ZIP"
+Text(35,10,"FILE  YOU  DOWNLOADED"
+Pause 
+Lbl 9
+ClrHome
+ClrDraw
+Menu("  MAIN MENU      ","DOUBLE",1,"TRIPLE",2,"ABOUT",Y,"EXIT",X)
+Stop
+Lbl X
+ClrDraw
+ClrHome
+CoordOn
+AxesOn
+Stop
+Lbl 1
+ClrHome
+Disp "AX+BY=C"
+Prompt A,B,C
+Disp "DX+EY=F"
+Prompt D,E,F
+If (((A+B)D)+((D+E)~A))=0 and (C(D)+F(~A))=0
+Then
+	Goto 98
+	Else
+	If (((A+B)D)+((D+E)~A))=0 and (C(D)+F(~A))>=1 or (((A+B)D)+((D+F+G)~A))=0 and (C(D)+F(~A))<=~1
+	Then
+		Goto 99
+		Else
+		Lbl 52
+		{A,D}->L1
+		{B,E}->L2
+		{C,F}->L3
+		List>matr(L1,L2,L3,[A])
+		rref([A])->[B]
+		Matr>list([B],L4,L5,L6)
+		L6(1)->N
+		L6(2)->O
+		Disp "X"
+		Disp N>Frac
+		Disp "Y"
+		Disp O>Frac
+		Pause 
+		Goto 9
+		Stop
+		Lbl 2
+		Disp "AX+BY+CZ=D"
+		Prompt A,B,C,D
+		Disp "EX+FY+GZ=H"
+		Prompt E,F,G,H
+		Disp "IX+JY+KZ=L"
+		Prompt I,J,K,L
+		If (((A+B+C)E)+((E+F+G)~A))=0 and (D(E)+H(~A))=0
+		Then
+			Goto 98
+			Else
+			If (((A+B+C)E)+((E+F+G)~A))=0 and (D(E)+H(~A))>=1 or (((A+B+C)E)+((E+F+G)~A))=0 and (D(E)+H(~A))<=~1
+			Then
+				Goto 99
+				Else
+				Lbl 53
+				{A,E,I}->L1
+				{B,F,J}->L2
+				{C,G,K}->L3
+				{D,H,L}->L4
+				List>matr(L1,L2,L3,L4,[A])
+				rref([A])->[B]
+				Matr>list([B],L3,L4,L5,L6)
+				L6(1)->N
+				L6(2)->O
+				L6(3)->P
+				Disp "X
+				Disp N>Frac
+				Disp "Y"
+				Disp O>Frac
+				Disp "Z"
+				Disp P>Frac
+				Pause 
+				Goto 9
+				Stop
+				Lbl 98
+				Disp "INFINIT SOLTIONS"
+				Pause 
+				Goto 9
+				Stop
+				Lbl 99
+				Disp "NO SOLUTIONS"
+				Pause 
+				Goto 9
+				Stop

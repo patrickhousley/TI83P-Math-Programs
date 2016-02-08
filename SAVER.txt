@@ -1,0 +1,12 @@
+ClrHome
+Goto A
+End
+Lbl A
+Repeat D=105
+	getKey->D
+	iPart(8rand+1)->A
+	iPart(16rand+1)->B
+	iPart(9rand+1)->C
+	Output(A,B,C)
+End
+ClrHome

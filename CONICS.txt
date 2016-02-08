@@ -1,0 +1,37 @@
+Prompt A,C,D,E,F
+If A!=0
+Then
+	Goto 1
+End
+If D=0
+Then
+	Disp "DEGENERATE","CASE"
+	Goto 2
+End
+Lbl 1
+If C!=0
+Then
+	D^^2/(4A)+E^^2/(4C)->G
+End
+If G!=F
+Then
+	Goto 2
+End
+Lbl 2
+If A=C
+Then
+	Disp "CIRCLE"
+	Stop
+End
+If AC>0
+Then
+	Disp "ELLIPSE"
+	Stop
+End
+If AC<0
+Then
+	Disp "HYPERBOLA"
+	Stop
+End
+Disp "PARABOLA"
+Stop

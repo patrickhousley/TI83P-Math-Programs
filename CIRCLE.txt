@@ -1,0 +1,42 @@
+ClrHome
+Lbl 1
+ClrDraw
+Menu("   FORM          ","AX^^2+BY^^2+CX+DX+E=0",I,"(X+A)^^2+(Y+B)^^2=C",J,"EXIT",X
+Lbl X
+Stop
+Lbl I
+Disp "AX^^2+BY^^2+CX+DY+E=0"
+Prompt A,B,C,D,E
+If A!=B
+Then
+	Goto 99
+	Else
+	A/A->A
+	B/A->B
+	C/A->C
+	D/A->D
+	E/A->E
+	C/2->C
+	C^^2->N
+	D/2->D
+	D^^2->O
+	~1*E->E
+	E+N+O->E
+	sqrt(E)->E
+	Circle(C,D,E)
+	Pause 
+	Goto 1
+End
+Lbl J
+Disp "(X+A)^^2+(Y+B)^^2=C
+Prompt A,B,C
+sqrt(C)->C
+Circle(A,B,C)
+Pause 
+Goto 1
+End
+Lbl 99
+Disp "THATS NOT A","CIRCLE"
+Pause 
+Goto 1
+End

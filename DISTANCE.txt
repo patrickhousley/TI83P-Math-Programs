@@ -1,0 +1,29 @@
+ClrHome
+ClrDraw
+CoordOff
+AxesOff
+Disp "ENTER X1"
+Input A
+Disp "ENTER Y1"
+Input B
+Disp "ENTER X2"
+Input C
+Disp "ENTER Y2"
+Input D
+(C-A)->E
+(D-B)->F
+E^^2->G
+F^^2->H
+G+H->I
+sqrt(I)->J
+Text(2,1,"sqrt((",C,"-",A,")^^2+(",D,"-",B,")^^2)"
+Text(8,1,"sqrt((",E,")^^2+(",F,")^^2)"
+Text(14,1,"sqrt((",G,")+(",H,")"
+Text(20,1,"sqrt(",I,")"
+Text(26,2,"DISTANCE=","",J
+Pause 
+CoordOn
+AxesOn
+ClrDraw
+ClrHome
+End
